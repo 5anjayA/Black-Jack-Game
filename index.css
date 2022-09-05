@@ -1,0 +1,49 @@
+index.css
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url("./cards/background.jpeg");
+    background-size: cover;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+#dealer-cards img {
+    height: 170px;
+    width: 125px;
+    margin: 1px;
+}
+
+h1{
+    color: goldenrod;
+}
+
+h2{
+    color: maroon;
+}
+
+
+#my-cards img {
+    height: 170px;
+    width: 125px;
+    margin: 1px;
+}
+
+#hit {
+    width: 90px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #016f32;
+    background: goldenrod;
+}
+
+#stay {
+    width: 90px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #016f32;
+    background: goldenrod;
+
+}
