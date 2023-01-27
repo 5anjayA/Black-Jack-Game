@@ -113,17 +113,18 @@ function stay() {
         message = "You Lose!";
     }
 
-    dealerSum = document.getElementById("dealer-sum").innerText;
-    mySum = document.getElementById("my-sum").innerText;
-    message = document.getElementById("results").innerText;
+    document.getElementById("dealer-sum").innerText = dealerSum;
+    document.getElementById("my-sum").innerText = mySum;
+    document.getElementById("results").innerText = message;
 }
 
-function getValue(card) {
+function getValue(card) { // checks the card and get the numerical value of the card
     let data = card.split("-"); 
     let value = data[0];
 
-    if (isNaN(value)) { //sometimes the Ace can have a value == 11 if needed//
-        if (value == "A") {
+    if (isNaN(value)) { // is value == Not A Number -> it must be K, Q or J so value == 10. //
+        if (value == "A") { 
+                              //Sometimes the Ace can have a value == 11 if needed to be//
             return 11;
         }
         return 10;
@@ -138,7 +139,7 @@ function checkAce(card) {
     return 0;
 }
 
-function reduceAce(playerSum, playerAceCount) { // as Ace's vale declared as == 11 -> playersum > 21 logically // 
+function reduceAce(playerSum, playerAceCount) { // as Ace's value declared as == 11 -> playersum > 21 logically // 
     while (playerSum > 21 && playerAceCount > 0) {
         playerSum -= 10;
         playerAceCount -= 1;
